@@ -1,5 +1,7 @@
 <template>
   <view>
+    <!-- 使用自定义的搜索组件 -->
+    <my-search :bgcolor="'#d00000'" :radius="18" @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧的滚动视图区域 -->
       <scroll-view class="left-scroll-view" scroll-y :style="{height: wh + 'px'}">
@@ -44,7 +46,7 @@
       // 获取当前系统的信息
       const sysInfo = uni.getSystemInfoSync()
       // 为 wh 窗口可用高度动态赋值
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight - 50
       // 调用获取分类列表数据的方法
       this.getCateList()
       // 滚动条距离顶部的距离
@@ -76,6 +78,12 @@
       gotoGoodsList(item3) {
         uni.navigateTo({
           url: '/subpkg/goods_list/goods_list?cid='  + item3.cat_id
+        })
+      },
+      // 跳转到分包中的搜索页面
+      gotoSearch() {
+        uni.navigateTo({
+          url: '/subpkg/search/search'
         })
       }
       
