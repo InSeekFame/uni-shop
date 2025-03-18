@@ -31,13 +31,6 @@
     {
       "root": "subpkg",
       "pages": [{
-        "path" : "goods_detail/goods_detail",
-        "style" : 
-        {
-          "navigationBarTitleText" : ""
-        }
-      },
-      {
         "path" : "goods_list/goods_list",
         "style" : 
         {
@@ -49,6 +42,13 @@
       },
       {
         "path" : "search/search",
+        "style" : 
+        {
+          "navigationBarTitleText" : ""
+        }
+      },
+      {
+        "path" : "goods_detail/goods_detail",
         "style" : 
         {
           "navigationBarTitleText" : ""
