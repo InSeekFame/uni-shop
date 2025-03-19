@@ -23,7 +23,6 @@
       </view>
     </view>
     
-    
   </view>
 </template>
 
